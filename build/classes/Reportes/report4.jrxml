@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1b69c93f-cef5-4524-864a-9d75eab41431">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="PieChartDataset" uuid="376c8f4f-b5da-4ba2-8c29-47f379dc803b"/>
+	<parameter name="Dni" class="java.lang.Integer"/>
+	<parameter name="fecha1" class="java.lang.String"/>
+	<parameter name="fecha2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     SUM(doctor.`dni_doctor`) AS doctor_dni_doctor,
+     doctor.`nombre` AS doctor_nombre,
+     doctor.`apellido` AS doctor_apellido,
+     consulta.`caso_clinico` AS consulta_caso_clinico,
+     consulta.`fecha` AS consulta_fecha,
+     consulta.`cod_animal` AS consulta_cod_animal,
+     consulta.`dni_doctor` AS consulta_dni_doctor,
+     consulta.`dni_alumno` AS consulta_dni_alumno,
+     alumno.`dni_alumno` AS alumno_dni_alumno,
+     alumno.`nombre` AS alumno_nombre,
+     alumno.`apellido` AS alumno_apellido,
+     alumno.`matricula` AS alumno_matricula,
+     doctor.`matricula` AS doctor_matricula
+FROM
+     `doctor` doctor INNER JOIN `consulta` consulta ON doctor.`dni_doctor` = consulta.`dni_doctor`
+     INNER JOIN `alumno` alumno ON consulta.`dni_alumno` = alumno.`dni_alumno`
+WHERE
+     consulta.`dni_doctor` = $P{Dni} AND consulta.`fecha` = $P{fecha1} AND consulta.`fecha` = $P{fecha2}]]>
+	</queryString>
+	<field name="doctor_dni_doctor" class="java.math.BigDecimal"/>
+	<field name="doctor_nombre" class="java.lang.String"/>
+	<field name="doctor_apellido" class="java.lang.String"/>
+	<field name="consulta_caso_clinico" class="java.lang.String"/>
+	<field name="consulta_fecha" class="java.sql.Date"/>
+	<field name="consulta_cod_animal" class="java.lang.Integer"/>
+	<field name="consulta_dni_doctor" class="java.lang.Integer"/>
+	<field name="consulta_dni_alumno" class="java.lang.Integer"/>
+	<field name="alumno_dni_alumno" class="java.lang.Integer"/>
+	<field name="alumno_nombre" class="java.lang.String"/>
+	<field name="alumno_apellido" class="java.lang.String"/>
+	<field name="alumno_matricula" class="java.lang.String"/>
+	<field name="doctor_matricula" class="java.lang.String"/>
+	<background>
+		<band height="555" splitType="Stretch">
+			<pie3DChart>
+				<chart isShowLegend="false" evaluationTime="Report">
+					<reportElement x="-18" y="406" width="229" height="139" uuid="0ef5dcc1-876f-47b7-bdd0-ad1c7bfd7446"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="PieChartDataset" uuid="eff4956c-e595-4eeb-ae5d-f84466c100a8">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(5)]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<keyExpression><![CDATA[/* Replace with your key expression here */
+$V{REPORT_COUNT}]]></keyExpression>
+					<valueExpression><![CDATA[new Double(200*Math.random()*5)]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot backgroundAlpha="0.5" foregroundAlpha="0.8">
+						<seriesColor seriesOrder="0" color="#3399FF"/>
+						<seriesColor seriesOrder="1" color="#00CCFF"/>
+						<seriesColor seriesOrder="2" color="#0066CC"/>
+						<seriesColor seriesOrder="3" color="#6699FF"/>
+						<seriesColor seriesOrder="4" color="#004A94"/>
+						<seriesColor seriesOrder="5" color="#00356A"/>
+					</plot>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF"/>
+				</pie3DPlot>
+			</pie3DChart>
+			<image>
+				<reportElement x="-20" y="65" width="229" height="250" uuid="dc0365e7-62ce-45e1-89e5-d65465486e8e">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["flower1.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-20" y="-20" width="229" height="250" uuid="dc01f528-e410-4c93-926a-7065a1eaf8a9">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} > 1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["flower1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="318" y="315" width="239" height="181" backcolor="#FFFFCC" uuid="039ce9a5-187c-4a4a-9256-3c0a18042b7c">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4">
+					<pen lineWidth="1.0" lineColor="#CC9900"/>
+					<topPen lineWidth="1.0" lineColor="#CC9900"/>
+					<leftPen lineWidth="1.0" lineColor="#CC9900"/>
+					<bottomPen lineWidth="1.0" lineColor="#CC9900"/>
+					<rightPen lineWidth="1.0" lineColor="#CC9900"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Each chart is populated on each page.
+The 3 pie charts are currently using an empty datasource and the values are
+generated using a random generator.
+
+This rectangle element is not printed (see the print when expression of this
+element)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="201" y="431" width="117" height="1" uuid="1a0f937e-7bcc-4c73-81db-35a526350e6e">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="275" y="-10" width="240" height="181" backcolor="#FFFFCC" uuid="293504b6-f7f4-476e-9b25-348376c1cc22">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4">
+					<pen lineWidth="1.0" lineColor="#CC9900"/>
+					<topPen lineWidth="1.0" lineColor="#CC9900"/>
+					<leftPen lineWidth="1.0" lineColor="#CC9900"/>
+					<bottomPen lineWidth="1.0" lineColor="#CC9900"/>
+					<rightPen lineWidth="1.0" lineColor="#CC9900"/>
+				</box>
+				<textElement markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Flowers
+
+There are two flowers, the first one is printed only starting from the second page, the other one only in the first page.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="72" y="37" width="204" height="1" uuid="dd9ccadd-f7fc-4a91-9fe7-1ec303e2ba36">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+		</band>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="336" y="65" width="449" height="29" uuid="26b7da5a-032c-49bc-96ae-c53436069412"/>
+				<textElement textAlignment="Right">
+					<font size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Flower SubTitle]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="0" width="822" height="65" forecolor="#006699" backcolor="#006699" uuid="4029496c-48a0-43bb-a0b8-8615448d3631"/>
+				<staticText>
+					<reportElement style="Title" x="231" y="0" width="578" height="65" uuid="cd5ee307-7e09-4457-a809-39a74ab8da1a"/>
+					<textElement textAlignment="Right">
+						<font size="54" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Flower Title]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch">
+			<frame>
+				<reportElement x="227" y="0" width="575" height="14" uuid="8715ed29-ea99-427a-a5aa-1a955a343e58"/>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="0" y="0" width="57" height="14" forecolor="#000000" uuid="8adb59c6-fc50-4895-8237-9f07568f94e0"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[consulta_caso_clinico]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="57" y="0" width="57" height="14" forecolor="#000000" uuid="d2fc31dd-4285-4508-8939-fb5f575cdc27"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[consulta_fecha]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="114" y="0" width="57" height="14" forecolor="#000000" uuid="ce5f5626-62ca-4906-a6e3-aaebb7f2d9ea"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[doctor_dni_doctor]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="171" y="0" width="57" height="14" forecolor="#000000" uuid="c236a8ba-2b8b-423d-b909-0087b328135f"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[doctor_matricula]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="228" y="0" width="57" height="14" forecolor="#000000" uuid="0af400bd-d140-4db1-a6ce-50bc484397ed"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[doctor_apellido]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="285" y="0" width="57" height="14" forecolor="#000000" uuid="2a978375-524a-483b-a35d-6a6c0099fde3"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[doctor_nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="342" y="0" width="57" height="14" forecolor="#000000" uuid="1441648d-5dd4-4183-a840-59fe431c65d6"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[alumno_dni_alumno]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="399" y="0" width="57" height="14" forecolor="#000000" uuid="ba490dba-218b-4fc3-9b0b-0dd54e4d77a1"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[alumno_matricula]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="456" y="0" width="57" height="14" forecolor="#000000" uuid="603405e5-f290-4b67-a499-7d0073faf023"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[alumno_apellido]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="513" y="0" width="57" height="14" forecolor="#000000" uuid="902fe04d-b180-4013-b6e2-8ac763abce8c"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[alumno_nombre]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="227" y="14" width="575" height="1" uuid="7e4afbca-1522-4439-91ad-f16a77588200"/>
+			</line>
+			<frame>
+				<reportElement x="227" y="0" width="575" height="14" uuid="38ad5905-03e6-49a7-b46c-cf9a689a62e8"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="57" height="14" uuid="1c8abc75-f88d-412a-b1cb-609c576de1a3"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{consulta_caso_clinico}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="57" y="0" width="57" height="14" uuid="37444063-4311-44cd-8c79-6ce9561fc05f"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{consulta_fecha}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="114" y="0" width="57" height="14" uuid="fcb94545-f43e-4196-8e0f-213f52acd61b"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{doctor_dni_doctor}/$P{Dni}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="171" y="0" width="57" height="14" uuid="e4db6565-b76b-402d-982c-d35c3b67dceb"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{doctor_matricula}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="228" y="0" width="57" height="14" uuid="f509a7cf-b77a-4625-8bdf-6b120442bda0"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{doctor_apellido}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="285" y="0" width="57" height="14" uuid="964c97c5-e8cb-4e60-9bea-1c5b5297e916"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{doctor_nombre}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="342" y="0" width="57" height="14" uuid="c4982e9b-2512-4632-ad9a-a84cd95ae8c5"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{alumno_dni_alumno}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="399" y="0" width="57" height="14" uuid="7c4f9b30-b967-41ae-a9ce-6c4bc3d0cac3"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{alumno_matricula}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="456" y="0" width="57" height="14" uuid="bc4d6f44-4fca-42b1-905f-4a751927160f"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{alumno_apellido}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="513" y="0" width="57" height="14" uuid="f3c8c5a3-2f09-409f-9cb4-6e1ba9315483"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{alumno_nombre}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="701fc644-ca16-44d3-b897-f23b290faadb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="16" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="0" width="800" height="16" forecolor="#D0B48E" backcolor="#006699" uuid="6216fc7b-328f-4814-ae00-40ca88e52bc5"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="753" y="0" width="40" height="16" forecolor="#FFFFFF" uuid="7e4938c4-14ad-4cc9-be1f-89fadd5fdfa9"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="673" y="0" width="80" height="16" forecolor="#FFFFFF" uuid="bd6fdd05-426e-4133-8a03-c2c80a8a6053"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="16" forecolor="#FFFFFF" uuid="bff8280d-ae0f-4ff6-82e9-967160ec315d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

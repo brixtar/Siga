@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fb137429-e674-4e73-a821-b1f0328d55a1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="protocolo_lab" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     animal_pequenios.`cod_animal` AS animal_pequenios_cod_animal,
+     animal_pequenios.`nombre` AS animal_pequenios_nombre,
+     animal_pequenios.`dni_duenio` AS animal_pequenios_dni_duenio,
+     doctor.`dni_doctor` AS doctor_dni_doctor,
+     doctor.`nombre` AS doctor_nombre,
+     doctor.`apellido` AS doctor_apellido,
+     duenio.`dni_duenio` AS duenio_dni_duenio,
+     duenio.`nombre` AS duenio_nombre,
+     duenio.`apellido` AS duenio_apellido
+FROM
+     `quimica_clinica` quimica_clinica  INNER JOIN `animal_pequenios` animal_pequenios ON animal_pequenios.`cod_animal` = quimica_clinica.`cod_animal`
+INNER JOIN `duenio` duenio ON animal_pequenios.`dni_duenio` = duenio.`dni_duenio`
+    
+     INNER JOIN `doctor` doctor ON quimica_clinica.`dni_doctor` = doctor.`dni_doctor`
+WHERE
+     protocolo_lab = $P{protocolo_lab}]]>
+	</queryString>
+	<field name="protocolo_lab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="caso_clinico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_animal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dni_doctor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="glucemia" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="uremia" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="creatininemia" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fosfatemia" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="albuminemia" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="got" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gpt" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ldh" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="observaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_especie" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_raza" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="peso" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nacimiento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="color" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dni_duenio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vivo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="facebook" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="domicilio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono_fijo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono_celular" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="matricula" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="animal_pequenios_cod_animal" class="java.lang.Integer"/>
+	<field name="animal_pequenios_nombre" class="java.lang.String"/>
+	<field name="animal_pequenios_dni_duenio" class="java.lang.Integer"/>
+	<field name="doctor_dni_doctor" class="java.lang.Integer"/>
+	<field name="doctor_nombre" class="java.lang.String"/>
+	<field name="doctor_apellido" class="java.lang.String"/>
+	<field name="duenio_dni_duenio" class="java.lang.Integer"/>
+	<field name="duenio_nombre" class="java.lang.String"/>
+	<field name="duenio_apellido" class="java.lang.String"/>
+	<title>
+		<band height="143" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="37" width="65" height="70" uuid="b4d2d6be-617d-41ed-aa10-35f398536d36"/>
+				<imageExpression><![CDATA["C:\\Users\\BayBay\\Documents\\NetBeansProjects\\Siga1\\src\\Reportes\\escudoUCHA.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="220" y="17" width="153" height="20" uuid="b4bdd6e9-aa3c-46f4-8e21-c24ac186b091"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Lab. de Análisis Clínicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="49" width="99" height="41" uuid="b5435173-d9d7-436b-8e96-6215a5a3590f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[HOSPITAL ESCUELA
+DE
+VETERINARIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="61" width="148" height="29" uuid="75967091-143c-45b9-b357-7638a42c37d5"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Universidad Nacional de La Rioja
+Sede Universitaria Chamical]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="17" width="76" height="20" uuid="40633826-c0ac-4e2d-8fb0-06c0a4f2823b"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Protocolo Lab N°:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="41" width="35" height="20" uuid="2bfe0ed6-c942-4857-aa70-fc4fff398665"/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="70" width="87" height="20" uuid="6f93e1d3-15f2-442c-947c-aab2e8b5e98e"/>
+				<text><![CDATA[Ficha Clínica N°:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="90" width="76" height="20" uuid="d24e95a6-a4b0-459e-abfd-c782d1737bc7"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID del Animal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="110" width="62" height="20" uuid="5ddc7e47-c606-4df2-a396-95172b1a3597"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Propietario:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="462" y="17" width="100" height="20" uuid="f6e9e168-1c7c-49de-8edd-bfdd6e36c3cd"/>
+				<textFieldExpression><![CDATA[$F{protocolo_lab}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="41" width="100" height="20" uuid="f94225a0-4e3b-4f3e-9b5c-53bcd6ad232f"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="70" width="89" height="20" uuid="e62d5f67-39ab-4df2-9886-47b5c7d1fdc4"/>
+				<textFieldExpression><![CDATA[$F{caso_clinico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="90" width="153" height="20" uuid="fa04ed01-18ce-421d-a1c3-364b16996b0a"/>
+				<textFieldExpression><![CDATA[$F{animal_pequenios_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="110" width="264" height="20" uuid="9dd390d0-f418-4b11-a9e4-d6303cf58bde"/>
+				<textFieldExpression><![CDATA[$F{duenio_apellido}+","+$F{duenio_nombre}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="213" height="130" uuid="64dacb62-dc6b-48f9-b1a8-124430ec0459"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="0" width="160" height="90" uuid="b3b8dceb-4d47-448f-9062-f2cb8c91d468"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="90" width="342" height="20" uuid="c247346b-676d-45eb-9fd5-83efaab5b327"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="110" width="342" height="20" uuid="54103d80-2cae-466e-969a-ab00f3a2cbd0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="373" y="0" width="182" height="90" uuid="61efcc9c-d0f6-42f7-b09f-7cf2766727c8"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="174" y="0" width="235" height="35" uuid="f071fff9-8639-4855-8efb-a823a4eae967"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[QUIMICA CLINICA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band height="624">
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="0" width="555" height="20" uuid="87c21b51-f075-4ef3-80dd-7007848f88a2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="0" width="100" height="20" uuid="0c099703-1369-41c3-a232-bcac07ab4d8e"/>
+				<text><![CDATA[Doctor responsable:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="128" y="0" width="403" height="20" uuid="ec53f07a-f977-4bcc-a1cc-163d75b2535e"/>
+				<textFieldExpression><![CDATA[$F{doctor_apellido}+","+$F{doctor_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="20" width="100" height="20" uuid="65ea0972-5367-41e2-937f-48f6b2e955ad"/>
+				<textFieldExpression><![CDATA[$F{glucemia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="40" width="100" height="20" uuid="075e45cd-f83b-4b07-a98b-64273995efd5"/>
+				<textFieldExpression><![CDATA[$F{uremia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="60" width="100" height="20" uuid="c0e62b24-f40b-4b52-80f4-3bb0db3bc880"/>
+				<textFieldExpression><![CDATA[$F{creatininemia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="80" width="100" height="20" uuid="1efee47a-b60f-4ee0-96a8-1632ab26747f"/>
+				<textFieldExpression><![CDATA[$F{fosfatemia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="100" width="100" height="20" uuid="dbce3885-6b54-4a04-9e5d-2ea1ce806e1e"/>
+				<textFieldExpression><![CDATA[$F{albuminemia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="120" width="100" height="20" uuid="fc2a67f2-b14c-48ac-861d-695938ddda8e"/>
+				<textFieldExpression><![CDATA[$F{got}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="140" width="100" height="20" uuid="bf56c416-537f-4043-b893-c8751dd6a7eb"/>
+				<textFieldExpression><![CDATA[$F{gpt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="160" width="100" height="20" uuid="b4eb65bf-200c-417c-8de9-f8e36f7c5863"/>
+				<textFieldExpression><![CDATA[$F{cpk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="180" width="100" height="20" uuid="eea93141-7112-4075-a232-465073d1a757"/>
+				<textFieldExpression><![CDATA[$F{ldh}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="220" width="490" height="62" uuid="94038206-291c-4cc9-bfa8-07d25322d7f2"/>
+				<textFieldExpression><![CDATA[$F{observaciones}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="20" width="100" height="20" uuid="93a015e5-822b-496d-989d-c5db9013132c"/>
+				<text><![CDATA[Glucemia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="40" width="100" height="20" uuid="ef08e326-8ff8-4154-b0e9-2a6fe9cdd1d1"/>
+				<text><![CDATA[Uremia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="60" width="100" height="20" uuid="5d1c4060-06f3-4478-abbf-ff07f876cfb4"/>
+				<text><![CDATA[Creatininemia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="80" width="100" height="20" uuid="3ac43f68-d61d-4e33-aab7-ac4274e5db7e"/>
+				<text><![CDATA[Fosfatemia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="100" width="100" height="20" uuid="ce946eca-8f4c-444b-9c4d-5f7cd18e3da2"/>
+				<text><![CDATA[Albuminemia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="120" width="100" height="20" uuid="ef755d89-eee0-4d15-9c1d-8a39717134ec"/>
+				<text><![CDATA[GOT (AST):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="140" width="100" height="20" uuid="fb44535c-9240-47a6-b054-c86cc856e373"/>
+				<text><![CDATA[GPT (AST):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="160" width="100" height="20" uuid="0c9f4e3e-3206-400d-a934-ee3ce53958bf"/>
+				<text><![CDATA[CPK:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="180" width="100" height="20" uuid="c6a12b92-3eec-43d1-b740-03f6adf156cc"/>
+				<text><![CDATA[LDH:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="200" width="100" height="20" uuid="d09e0b79-2ac7-4c79-adbe-de3cf7d7a6e2"/>
+				<text><![CDATA[OBSERVACIONES:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="20" width="555" height="20" uuid="83a86168-f503-4138-9f2d-256df9fb1a78"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="40" width="555" height="20" uuid="d78729fe-9c5f-4dd9-9958-ee08eea305db"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="60" width="555" height="20" uuid="f58bf595-7999-430b-9b72-b8cb2e7208c3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="80" width="555" height="20" uuid="86f50327-f7a2-42c7-90ec-de3e6664e853"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="100" width="555" height="20" uuid="6c0d3252-db50-453c-b06a-143889ccf50c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="140" width="555" height="20" uuid="99f51b04-5ee4-4071-83bd-fd246d7e0722"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="120" width="555" height="20" uuid="669239fb-adcf-49ed-81b8-c955af017e41"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="180" width="555" height="20" uuid="76e25054-95ad-4ee9-b860-763fb28a1740"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="160" width="555" height="20" uuid="c0178810-4973-41ee-af81-93b9ea42af38"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="200" width="555" height="82" uuid="f80da205-d18f-446f-956c-90bc4b559545"/>
+			</rectangle>
+			<line>
+				<reportElement x="113" y="20" width="1" height="180" uuid="da96e7ab-9dbb-4a4a-9778-f65f3860eeb1"/>
+			</line>
+		</band>
+	</columnFooter>
+</jasperReport>

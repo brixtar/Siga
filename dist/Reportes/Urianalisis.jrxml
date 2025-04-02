@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fb137429-e674-4e73-a821-b1f0328d55a1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="protocolo_lab" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     animal_pequenios.`cod_animal` AS animal_pequenios_cod_animal,
+     animal_pequenios.`nombre` AS animal_pequenios_nombre,
+     animal_pequenios.`dni_duenio` AS animal_pequenios_dni_duenio,
+     urianalisis.`protocolo_lab` AS urianalisis_protocolo_lab,
+     urianalisis.`fecha` AS urianalisis_fecha,
+     urianalisis.`caso_clinico` AS urianalisis_caso_clinico,
+     urianalisis.`cod_animal` AS urianalisis_cod_animal,
+     urianalisis.`dni_doctor` AS urianalisis_dni_doctor,
+     urianalisis.`color` AS urianalisis_color,
+     urianalisis.`aspecto` AS urianalisis_aspecto,
+     urianalisis.`densidad` AS urianalisis_densidad,
+     urianalisis.`ph` AS urianalisis_ph,
+     urianalisis.`proteina` AS urianalisis_proteina,
+     urianalisis.`urobilinogeno` AS urianalisis_urobilinogeno,
+     urianalisis.`glucosa` AS urianalisis_glucosa,
+     urianalisis.`c_cetonicos` AS urianalisis_c_cetonicos,
+     urianalisis.`leucocitos` AS urianalisis_leucocitos,
+     urianalisis.`nitritos` AS urianalisis_nitritos,
+     urianalisis.`sangre_oculta` AS urianalisis_sangre_oculta,
+     urianalisis.`pig_biliares` AS urianalisis_pig_biliares,
+     urianalisis.`observaciones` AS urianalisis_observaciones,
+     urianalisis.`celulas_sanguineas` AS urianalisis_celulas_sanguineas,
+     urianalisis.`celulas_sanguineas2` AS urianalisis_celulas_sanguineas2,
+     urianalisis.`celulas_epiteliales` AS urianalisis_celulas_epiteliales,
+     urianalisis.`celulas_epiteliales2` AS urianalisis_celulas_epiteliales2,
+     urianalisis.`cilindros` AS urianalisis_cilindros,
+     urianalisis.`cilindros2` AS urianalisis_cilindros2,
+     urianalisis.`cristales` AS urianalisis_cristales,
+     urianalisis.`cristales2` AS urianalisis_cristales2,
+     urianalisis.`otra` AS urianalisis_otra,
+     urianalisis.`otra2` AS urianalisis_otra2,
+     urianalisis.`observaciones2` AS urianalisis_observaciones2,
+     doctor.`dni_doctor` AS doctor_dni_doctor,
+     doctor.`nombre` AS doctor_nombre,
+     doctor.`apellido` AS doctor_apellido,
+     duenio.`dni_duenio` AS duenio_dni_duenio,
+     duenio.`nombre` AS duenio_nombre,
+     duenio.`apellido` AS duenio_apellido
+FROM
+     `animal_pequenios` animal_pequenios INNER JOIN `urianalisis` urianalisis ON animal_pequenios.`cod_animal` = urianalisis.`cod_animal`
+     INNER JOIN `doctor` doctor ON urianalisis.`dni_doctor` = doctor.`dni_doctor`
+     INNER JOIN `duenio` duenio ON animal_pequenios.`dni_duenio` = duenio.`dni_duenio`
+WHERE
+     protocolo_lab = $P{protocolo_lab}]]>
+	</queryString>
+	<field name="animal_pequenios_cod_animal" class="java.lang.Integer"/>
+	<field name="animal_pequenios_nombre" class="java.lang.String"/>
+	<field name="animal_pequenios_dni_duenio" class="java.lang.Integer"/>
+	<field name="urianalisis_protocolo_lab" class="java.lang.String"/>
+	<field name="urianalisis_fecha" class="java.lang.String"/>
+	<field name="urianalisis_caso_clinico" class="java.lang.String"/>
+	<field name="urianalisis_cod_animal" class="java.lang.Integer"/>
+	<field name="urianalisis_dni_doctor" class="java.lang.Integer"/>
+	<field name="urianalisis_color" class="java.lang.String"/>
+	<field name="urianalisis_aspecto" class="java.lang.String"/>
+	<field name="urianalisis_densidad" class="java.lang.String"/>
+	<field name="urianalisis_ph" class="java.lang.Integer"/>
+	<field name="urianalisis_proteina" class="java.lang.String"/>
+	<field name="urianalisis_urobilinogeno" class="java.lang.String"/>
+	<field name="urianalisis_glucosa" class="java.lang.String"/>
+	<field name="urianalisis_c_cetonicos" class="java.lang.String"/>
+	<field name="urianalisis_leucocitos" class="java.lang.String"/>
+	<field name="urianalisis_nitritos" class="java.lang.String"/>
+	<field name="urianalisis_sangre_oculta" class="java.lang.String"/>
+	<field name="urianalisis_pig_biliares" class="java.lang.String"/>
+	<field name="urianalisis_observaciones" class="java.lang.String"/>
+	<field name="urianalisis_celulas_sanguineas" class="java.lang.String"/>
+	<field name="urianalisis_celulas_sanguineas2" class="java.lang.String"/>
+	<field name="urianalisis_celulas_epiteliales" class="java.lang.String"/>
+	<field name="urianalisis_celulas_epiteliales2" class="java.lang.String"/>
+	<field name="urianalisis_cilindros" class="java.lang.String"/>
+	<field name="urianalisis_cilindros2" class="java.lang.String"/>
+	<field name="urianalisis_cristales" class="java.lang.String"/>
+	<field name="urianalisis_cristales2" class="java.lang.String"/>
+	<field name="urianalisis_otra" class="java.lang.String"/>
+	<field name="urianalisis_otra2" class="java.lang.String"/>
+	<field name="urianalisis_observaciones2" class="java.lang.String"/>
+	<field name="doctor_dni_doctor" class="java.lang.Integer"/>
+	<field name="doctor_nombre" class="java.lang.String"/>
+	<field name="doctor_apellido" class="java.lang.String"/>
+	<field name="duenio_dni_duenio" class="java.lang.Integer"/>
+	<field name="duenio_nombre" class="java.lang.String"/>
+	<field name="duenio_apellido" class="java.lang.String"/>
+	<title>
+		<band height="143" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="37" width="65" height="70" uuid="b4d2d6be-617d-41ed-aa10-35f398536d36"/>
+				<imageExpression><![CDATA["C:\\Users\\BayBay\\Documents\\NetBeansProjects\\Siga1\\src\\Reportes\\escudoUCHA.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="220" y="17" width="153" height="20" uuid="b4bdd6e9-aa3c-46f4-8e21-c24ac186b091"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Lab. de Análisis Clínicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="49" width="99" height="41" uuid="b5435173-d9d7-436b-8e96-6215a5a3590f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[HOSPITAL ESCUELA
+DE
+VETERINARIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="61" width="148" height="29" uuid="75967091-143c-45b9-b357-7638a42c37d5"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Universidad Nacional de La Rioja
+Sede Universitaria Chamical]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="17" width="76" height="20" uuid="40633826-c0ac-4e2d-8fb0-06c0a4f2823b"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Protocolo Lab N°:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="41" width="35" height="20" uuid="2bfe0ed6-c942-4857-aa70-fc4fff398665"/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="70" width="87" height="20" uuid="6f93e1d3-15f2-442c-947c-aab2e8b5e98e"/>
+				<text><![CDATA[Ficha Clínica N°:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="90" width="76" height="20" uuid="d24e95a6-a4b0-459e-abfd-c782d1737bc7"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID del Animal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="110" width="62" height="20" uuid="5ddc7e47-c606-4df2-a396-95172b1a3597"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Propietario:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="462" y="17" width="100" height="20" uuid="f6e9e168-1c7c-49de-8edd-bfdd6e36c3cd"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_protocolo_lab}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="41" width="100" height="20" uuid="f94225a0-4e3b-4f3e-9b5c-53bcd6ad232f"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="70" width="89" height="20" uuid="e62d5f67-39ab-4df2-9886-47b5c7d1fdc4"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_caso_clinico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="90" width="153" height="20" uuid="fa04ed01-18ce-421d-a1c3-364b16996b0a"/>
+				<textFieldExpression><![CDATA[$F{animal_pequenios_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="110" width="264" height="20" uuid="9dd390d0-f418-4b11-a9e4-d6303cf58bde"/>
+				<textFieldExpression><![CDATA[$F{duenio_apellido}+","+$F{duenio_nombre}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="213" height="130" uuid="64dacb62-dc6b-48f9-b1a8-124430ec0459"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="0" width="160" height="90" uuid="b3b8dceb-4d47-448f-9062-f2cb8c91d468"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="90" width="342" height="20" uuid="c247346b-676d-45eb-9fd5-83efaab5b327"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="110" width="342" height="20" uuid="54103d80-2cae-466e-969a-ab00f3a2cbd0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="373" y="0" width="182" height="90" uuid="61efcc9c-d0f6-42f7-b09f-7cf2766727c8"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="198" y="0" width="188" height="35" uuid="f071fff9-8639-4855-8efb-a823a4eae967"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[URIANÁLISIS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band height="624">
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="555" height="20" uuid="93213013-24eb-473f-b5be-55502b2d1465"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="27" y="0" width="100" height="20" uuid="3ecec935-4571-462a-acb6-9385bbea0c8a"/>
+				<text><![CDATA[Doctor responsable:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="127" y="0" width="403" height="20" uuid="e2fc3bbc-88ab-4bee-9574-1f07f0417af9"/>
+				<textFieldExpression><![CDATA[$F{doctor_apellido}+","+$F{doctor_nombre}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="80" width="267" height="20" uuid="f7c6730b-30f0-4204-b703-88ef7b38a6aa"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="60" width="267" height="20" uuid="a620d052-adca-40e1-bb25-46237c15f7e8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="39" width="267" height="20" uuid="844e6cb2-c398-402b-98ec-da2cb8ba268d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="100" width="267" height="20" uuid="c0d1b44f-706e-4305-87c9-ac7535fdaa9f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="120" width="267" height="20" uuid="d7763358-eb19-4f98-98b1-b277d5ca959c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="113" y="60" width="142" height="20" uuid="1cc9b889-cb0f-4386-967e-ddd0e8c5ac48"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_color}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="80" width="142" height="20" uuid="af4c26d0-826f-463f-ad92-af96f6283449"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_aspecto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="100" width="142" height="20" uuid="b226882c-197c-4dfe-852a-15e7e8bbd9e8"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_densidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="120" width="142" height="20" uuid="51143667-a1af-4b83-85e3-6070a47c5bca"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_ph}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="20" width="74" height="20" uuid="fa3ca9c2-524c-4582-8966-fc461dcabe43"/>
+				<text><![CDATA[Examen Físico:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="40" width="74" height="20" uuid="d02dd7ea-a6f9-41b8-afbe-c11907723431"/>
+				<text><![CDATA[Parámetro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="60" width="74" height="20" uuid="f2e348f9-4d17-4eba-b9fb-21fef7d43597"/>
+				<text><![CDATA[Color:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="80" width="41" height="20" uuid="31dc9f21-4b73-4084-9f79-fd177557cdff"/>
+				<text><![CDATA[Aspecto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="100" width="54" height="20" uuid="5bfa2397-b814-491c-84f4-2e8f535150ba"/>
+				<text><![CDATA[Densidad:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="120" width="54" height="20" uuid="50005df6-369f-4601-8b10-338c4c66d6bb"/>
+				<text><![CDATA[PH:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="140" width="87" height="20" uuid="4b3e6ce1-49b3-404f-9483-6f0e4015f3e6"/>
+				<text><![CDATA[Examen Químico:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="40" width="74" height="20" uuid="e6e0bbfb-e331-4c7b-8a44-4f0db6cafb8b"/>
+				<text><![CDATA[Valor hallado:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="340" width="555" height="66" uuid="1b34a76c-c44d-4a98-97f9-21ee2d936d23"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="340" width="555" height="66" uuid="6abb04a6-29c3-417a-8f19-859200a9349c"/>
+				<textFieldExpression><![CDATA["Observaciones: "+$F{urianalisis_observaciones}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="98" y="39" width="1" height="100" uuid="bf95f461-1933-434e-bf59-964bc39de2cc"/>
+			</line>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="181" width="267" height="20" uuid="d19bac84-813f-4cf1-83ea-01b15f562dcb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="160" width="267" height="20" uuid="8d386821-3a6f-475e-a527-ae873244c397"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="241" width="74" height="20" uuid="b8053988-cfb9-4957-bdc8-6765fcb0b0c0"/>
+				<text><![CDATA[C. Cetónicos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="221" width="54" height="20" uuid="bcd78699-9b6b-4a5a-ba4f-a257692388bd"/>
+				<text><![CDATA[Glucosa:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="221" width="267" height="20" uuid="de321126-41b1-4641-b0bb-881fe9e9ba5c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="201" width="74" height="20" uuid="c1140071-24cc-4caa-b956-44e28176626e"/>
+				<text><![CDATA[Urobilinógeno:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="113" y="201" width="142" height="20" uuid="c3df8521-5f2d-424f-9e78-0660d8860cba"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_urobilinogeno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="181" width="130" height="20" uuid="9df3a557-2f93-47e0-8848-95a42abfe920"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_proteina}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="98" y="160" width="1" height="180" uuid="84323d8c-01ad-4ee0-bdc4-4097b47b8efd"/>
+			</line>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="240" width="267" height="20" uuid="92e79283-6f10-4022-a685-cf06a00b32f9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="181" width="74" height="20" uuid="65879ee9-66ed-4bc0-a4f2-92b120706047"/>
+				<text><![CDATA[Proteína:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="113" y="241" width="130" height="20" uuid="3b82d16e-3c8b-4bd1-a4f5-178ecd3caaa0"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_c_cetonicos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="221" width="117" height="20" uuid="ba545286-c3a1-450b-8256-bbdcc245bcc8"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_glucosa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="161" width="74" height="20" uuid="61cf78ee-d57c-4633-9000-250372018a21"/>
+				<text><![CDATA[Parámetro:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="201" width="267" height="20" uuid="f50719ce-77b6-4dc9-b5d8-17b5cc6e05fe"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="113" y="161" width="74" height="20" uuid="98c6a660-8f07-495d-a69a-c9867da8d3f9"/>
+				<text><![CDATA[Valor hallado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="260" width="74" height="20" uuid="05d4b347-785d-45ae-8020-8c6b935d30dc"/>
+				<text><![CDATA[Leucocitos:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="260" width="267" height="20" uuid="cf880f29-0d2d-44ff-9d96-6a2b1691b880"/>
+			</rectangle>
+			<textField>
+				<reportElement x="113" y="260" width="130" height="20" uuid="b998df55-1e56-449d-911e-dabdb3c79432"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_leucocitos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="280" width="74" height="20" uuid="04e7e1b8-df90-491b-94dc-bca9d51a64bd"/>
+				<text><![CDATA[Nitritos:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="280" width="267" height="20" uuid="dc4d634c-fed5-4bbc-97f6-5083372819e4"/>
+			</rectangle>
+			<textField>
+				<reportElement x="113" y="280" width="130" height="20" uuid="c530d61c-5e65-4b9b-8de3-133f8f6403d0"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_nitritos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="300" width="74" height="20" uuid="d583b0e8-7933-47e0-b7c4-99bc0688235a"/>
+				<text><![CDATA[Sangre oculta:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="300" width="267" height="20" uuid="42014059-1461-4c85-9990-2e51ee1c5600"/>
+			</rectangle>
+			<textField>
+				<reportElement x="113" y="300" width="142" height="20" uuid="1d9d6535-3c35-48b8-bb05-5a4846a566d3"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_sangre_oculta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="320" width="74" height="20" uuid="353f1874-4ecc-4844-8949-4775114be3bf"/>
+				<text><![CDATA[Pig. Biliares:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="320" width="267" height="20" uuid="e2e90769-2e92-4363-9412-548a6c0ffcb7"/>
+			</rectangle>
+			<textField>
+				<reportElement x="113" y="320" width="130" height="20" uuid="b2f25b2d-79d5-4e48-bf12-df84b60d18ab"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_pig_biliares}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="497" width="396" height="20" uuid="146d6158-db6e-4a79-8c91-9f081e2f94a9"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_cilindros2}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="497" width="555" height="20" uuid="bd46f06c-0ef1-41f5-9393-5b1a741d3938"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="457" width="555" height="20" uuid="8577379c-6698-4e22-b246-890a7b4bfdfe"/>
+			</rectangle>
+			<textField>
+				<reportElement x="158" y="477" width="397" height="20" uuid="41260776-be39-427b-a26a-00d8c84d46d0"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_celulas_epiteliales2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="437" width="74" height="20" uuid="2f5ff05a-1d0d-4524-bbd6-e65bcce5e9d8"/>
+				<text><![CDATA[Observación:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="536" width="555" height="20" uuid="41e87599-1e18-4e0a-9caa-de32fd8566c4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="436" width="555" height="20" uuid="3af854d0-c19f-443d-9983-336d37f44f11"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="416" width="126" height="20" uuid="359b4d1b-8b2c-4ab5-8ab7-ec25dce4a7da"/>
+				<text><![CDATA[Examen del Sedimento:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="154" y="437" width="1" height="119" uuid="8decf200-5120-4210-8351-6dbebaa31398"/>
+			</line>
+			<staticText>
+				<reportElement x="193" y="436" width="74" height="20" uuid="84b00498-2d21-4738-91d3-38f70d1f8353"/>
+				<text><![CDATA[Valor hallado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="158" y="536" width="397" height="20" uuid="3959f2a4-e082-4dc8-a1c4-5ff6ddc9139b"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_otra2}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="516" width="555" height="20" uuid="af1554e0-9728-4652-84f0-bc1f958dc96b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="477" width="555" height="20" uuid="170a45c7-bf0b-4de1-9426-2f1249e50ea1"/>
+			</rectangle>
+			<textField>
+				<reportElement x="158" y="457" width="396" height="20" uuid="26d69999-3fe4-41af-9e0a-d340d4878465"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_celulas_sanguineas2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="516" width="396" height="20" uuid="1584875f-420e-4808-b267-a03f2240372e"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_cristales2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="457" width="142" height="20" uuid="ab977bfd-ed7e-4c78-b466-5972bbeebf94"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_celulas_sanguineas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="477" width="142" height="20" uuid="92b54539-e993-4a41-a6bd-9c0ab239b437"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_celulas_epiteliales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="496" width="142" height="20" uuid="827d2883-cc7c-4dd5-ad91-fa39330239bf"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_cilindros}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="516" width="142" height="20" uuid="4a2598bb-e6a8-4492-8cad-695eeb5e0dfe"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_cristales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="536" width="142" height="20" uuid="54e7cad5-4b8e-48d3-ad03-73c18defffd7"/>
+				<textFieldExpression><![CDATA[$F{urianalisis_otra}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="556" width="555" height="68" uuid="22571664-84e2-46a5-8df7-60a88b998d19"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="556" width="555" height="68" uuid="8f76fcf4-23a2-4011-a11e-121ed977e0b2"/>
+				<textFieldExpression><![CDATA["Observaciones: "+$F{urianalisis_observaciones2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

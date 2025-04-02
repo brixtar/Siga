@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a5d99a40-d86a-4f2c-9376-635ae7fe871a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     doctor.`dni_doctor` AS doctor_dni_doctor,
+     doctor.`nombre` AS doctor_nombre,
+     doctor.`apellido` AS doctor_apellido,
+     hemograma.`dni_doctor` AS hemograma_dni_doctor,
+     hemograma.`protocolo_lab` AS hemograma_protocolo_lab,
+     hemograma.`fecha` AS hemograma_fecha
+FROM
+     `doctor` doctor INNER JOIN `hemograma` hemograma ON doctor.`dni_doctor` = hemograma.`dni_doctor`
+GROUP BY 
+     doctor.`apellido`]]>
+	</queryString>
+	<field name="doctor_dni_doctor" class="java.lang.Integer"/>
+	<field name="doctor_nombre" class="java.lang.String"/>
+	<field name="doctor_apellido" class="java.lang.String"/>
+	<field name="hemograma_dni_doctor" class="java.lang.Integer"/>
+	<field name="hemograma_protocolo_lab" class="java.lang.String"/>
+	<field name="hemograma_fecha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="103" splitType="Stretch">
+			<textField>
+				<reportElement x="124" y="16" width="100" height="20" uuid="e76f90e3-ca14-4984-8e38-23e16d062364"/>
+				<textFieldExpression><![CDATA[$F{doctor_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="16" width="100" height="20" uuid="2cee74ad-b0cf-49dc-9a05-84bf80d5d311"/>
+				<textFieldExpression><![CDATA[$F{doctor_dni_doctor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="16" width="100" height="20" uuid="67da2db6-95eb-424b-8c30-1051b50d007d"/>
+				<textFieldExpression><![CDATA[$F{hemograma_protocolo_lab}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="196" y="3" width="200" height="100" uuid="799d801c-740a-4cc0-a2fc-2420e9104385"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{doctor_nombre}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{hemograma_protocolo_lab}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{examenes_COUNT}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="f297b02b-86fe-4c41-818b-e15742d4fbee"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="ccf31dc8-135c-4b98-b558-189d38542a75"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="0dc70e5d-80d4-478c-9d02-b0c4ae7d98a8"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

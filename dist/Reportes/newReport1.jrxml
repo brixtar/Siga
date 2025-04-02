@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e96c50dc-0679-4003-8a60-296a11b2458c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="92"/>
+	<parameter name="dni" class="java.lang.String"/>
+	<parameter name="fecha1" class="java.lang.String"/>
+	<parameter name="fecha2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     doctor.`dni_doctor` AS doctor_dni_doctor,
+     doctor.`nombre` AS doctor_nombre,
+     doctor.`apellido` AS doctor_apellido,
+     consulta.`caso_clinico` AS consulta_caso_clinico,
+     consulta.`fecha` AS consulta_fecha,
+     consulta.`cod_animal` AS consulta_cod_animal,
+     consulta.`dni_doctor` AS consulta_dni_doctor,
+     consulta.`dni_alumno` AS consulta_dni_alumno,
+     alumno.`dni_alumno` AS alumno_dni_alumno,
+     alumno.`nombre` AS alumno_nombre,
+     alumno.`apellido` AS alumno_apellido,
+     alumno.`matricula` AS alumno_matricula,
+     doctor.`matricula` AS doctor_matricula
+FROM
+     `consulta` consulta INNER JOIN `doctor` doctor ON consulta.`dni_doctor` = doctor.`dni_doctor`
+INNER JOIN `alumno` alumno ON consulta.`dni_alumno` = alumno.`dni_alumno`
+     WHERE
+     (consulta.`dni_doctor` = $P{dni}) AND (consulta.`fecha` BETWEEN $P{fecha1}  AND $P{fecha2})]]>
+	</queryString>
+	<field name="doctor_dni_doctor" class="java.lang.Integer"/>
+	<field name="doctor_nombre" class="java.lang.String"/>
+	<field name="doctor_apellido" class="java.lang.String"/>
+	<field name="consulta_caso_clinico" class="java.lang.String"/>
+	<field name="consulta_fecha" class="java.sql.Date"/>
+	<field name="consulta_cod_animal" class="java.lang.Integer"/>
+	<field name="consulta_dni_doctor" class="java.lang.Integer"/>
+	<field name="consulta_dni_alumno" class="java.lang.Integer"/>
+	<field name="alumno_dni_alumno" class="java.lang.Integer"/>
+	<field name="alumno_nombre" class="java.lang.String"/>
+	<field name="alumno_apellido" class="java.lang.String"/>
+	<field name="alumno_matricula" class="java.lang.String"/>
+	<field name="doctor_matricula" class="java.lang.String"/>
+	<variable name="doctor_dni_doctor_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{doctor_dni_doctor}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="143" splitType="Stretch">
+			<staticText>
+				<reportElement x="168" y="26" width="367" height="80" uuid="98092061-28cb-4018-b521-d5f47cfc77bb"/>
+				<textElement textAlignment="Center">
+					<font size="23"/>
+				</textElement>
+				<text><![CDATA[Universidad Nacional de La Rioja
+Sede Universitaria Chamical]]></text>
+			</staticText>
+			<image>
+				<reportElement x="42" y="13" width="105" height="104" uuid="f7214b4f-053e-4aa0-940a-e0eee7568240"/>
+				<imageExpression><![CDATA["C:\\Users\\BayBay\\Documents\\NetBeansProjects\\Siga1\\src\\Reportes\\escudoUCHA.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="3" width="555" height="140" uuid="e36e4172-5aa9-4041-b4a6-11bd1150fead"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="106" splitType="Stretch">
+			<staticText>
+				<reportElement x="147" y="0" width="263" height="35" uuid="f88fbeb1-ed34-439f-b4ae-9240df68f74d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estadisticas en las Consultas Clinicas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="60" height="20" uuid="686b5190-dfa7-46d7-8087-3a73dbe722e0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Docente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="35" width="100" height="20" uuid="162c4f29-63cc-4523-98ef-db291cd94def"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estadisticas de :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="35" width="21" height="20" uuid="404a6671-ab9c-4bdd-8383-4212700d64bd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[a:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="73" width="190" height="20" uuid="b8719bb1-92fd-4337-a6ed-d115bfab78db"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero de consultas realizadas:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="353" y="35" width="100" height="20" uuid="a565e159-82bf-404f-a847-3bd62d78fc48"/>
+				<textFieldExpression><![CDATA[$P{fecha1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="35" width="100" height="20" uuid="63a238fe-208b-4215-bdd7-f4058dbbed7d"/>
+				<textFieldExpression><![CDATA[$P{fecha2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="35" width="100" height="20" uuid="a47fb096-ec30-46c9-adc7-c372b8a270d5"/>
+				<textFieldExpression><![CDATA[$F{doctor_apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="35" width="100" height="20" uuid="f2f88613-45f3-450d-97c8-9b6c70c3bf23"/>
+				<textFieldExpression><![CDATA[$F{doctor_nombre}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Page">
+				<reportElement x="194" y="73" width="100" height="20" uuid="f5328ffd-782e-43e5-9dbc-b1484a05465e"/>
+				<textFieldExpression><![CDATA[$V{doctor_dni_doctor_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="42" height="20" uuid="6d02ec23-8024-4776-b0ad-413a9bec49c6"/>
+				<text><![CDATA[doctor_dni_doctor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="0" width="42" height="20" uuid="8eaa69d1-1858-4a3b-8374-0210d9b0787e"/>
+				<text><![CDATA[doctor_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="0" width="42" height="20" uuid="0d5b59a5-f25d-41fd-94d4-3fa0e39273b9"/>
+				<text><![CDATA[doctor_apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="0" width="42" height="20" uuid="eced305c-8150-42b1-9467-c0c8c35180d2"/>
+				<text><![CDATA[consulta_caso_clinico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="0" width="42" height="20" uuid="79434aa5-e5d0-4a65-97d2-d9f9dda97b46"/>
+				<text><![CDATA[consulta_fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="42" height="20" uuid="2b5b32f0-e18d-480d-85ae-7119db9fc142"/>
+				<text><![CDATA[consulta_cod_animal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="0" width="42" height="20" uuid="944b17ea-58e5-4bf1-9a02-0e0147a0c01c"/>
+				<text><![CDATA[consulta_dni_doctor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="0" width="42" height="20" uuid="85316cfc-85eb-4f45-b3f7-01353dec2a8f"/>
+				<text><![CDATA[consulta_dni_alumno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="0" width="42" height="20" uuid="f2073544-5e44-49f4-aaf6-ec855a0c26b6"/>
+				<text><![CDATA[alumno_dni_alumno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="0" width="42" height="20" uuid="a3a35c2e-b7ac-4491-b030-30c3a6c48f13"/>
+				<text><![CDATA[alumno_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="42" height="20" uuid="399d9dac-96bc-4cbb-a384-c28dab39e70a"/>
+				<text><![CDATA[alumno_apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="0" width="42" height="20" uuid="d9c99aa3-6605-4bd5-ab10-9003ef1bf1d1"/>
+				<text><![CDATA[alumno_matricula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="0" width="42" height="20" uuid="9132ea03-b370-4cac-8e0a-67e9ae83c088"/>
+				<text><![CDATA[doctor_matricula]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="42" height="20" uuid="45eced72-5738-4d82-8be7-dcee82ea4196"/>
+				<textFieldExpression><![CDATA[$F{doctor_dni_doctor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="0" width="42" height="20" uuid="f273a7f6-fd86-4e15-8548-54edec7ffa25"/>
+				<textFieldExpression><![CDATA[$F{doctor_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="0" width="42" height="20" uuid="dbb8d180-d7b4-4d0f-b510-07e1a2802a87"/>
+				<textFieldExpression><![CDATA[$F{doctor_apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="0" width="42" height="20" uuid="477fa2bb-aa31-469e-a61f-ab1caf474cd3"/>
+				<textFieldExpression><![CDATA[$F{consulta_caso_clinico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="42" height="20" uuid="d8b015a9-3e95-4f0e-9ebd-ea460ae296a7"/>
+				<textFieldExpression><![CDATA[$F{consulta_fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="42" height="20" uuid="b59783ed-8e6d-40f9-8cd6-25f4c938d095"/>
+				<textFieldExpression><![CDATA[$F{consulta_cod_animal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="0" width="42" height="20" uuid="c450e2c3-8878-4d68-9166-91d96edc9a6f"/>
+				<textFieldExpression><![CDATA[$F{consulta_dni_doctor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="294" y="0" width="42" height="20" uuid="9b34f423-aaab-41bd-bfba-0dcb0f91df95"/>
+				<textFieldExpression><![CDATA[$F{consulta_dni_alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="0" width="42" height="20" uuid="e9f185ea-55ba-4db4-b475-abacea1cb264"/>
+				<textFieldExpression><![CDATA[$F{alumno_dni_alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="0" width="42" height="20" uuid="10299944-3883-458d-9255-61f8cd28e27a"/>
+				<textFieldExpression><![CDATA[$F{alumno_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="42" height="20" uuid="feacf462-eafa-4320-8766-0ba958cdc9fc"/>
+				<textFieldExpression><![CDATA[$F{alumno_apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="0" width="42" height="20" uuid="f8f6daee-3a83-4430-9c8c-a720dda941fd"/>
+				<textFieldExpression><![CDATA[$F{alumno_matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="0" width="42" height="20" uuid="88ff39f1-9bff-44ef-b23f-d0a35f919a01"/>
+				<textFieldExpression><![CDATA[$F{doctor_matricula}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

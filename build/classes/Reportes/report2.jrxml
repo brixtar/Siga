@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d62c586c-0ab0-4827-a338-2d4881158af7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="39"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     doctor.`nombre` AS doctor_nombre,
+     doctor.`dni_doctor` AS doctor_dni_doctor,
+     doctor.`apellido` AS doctor_apellido,
+     hemograma.`protocolo_lab` AS hemograma_protocolo_lab,
+     hemograma.`dni_doctor` AS hemograma_dni_doctor,
+     hemograma.`fecha` AS hemograma_fecha
+FROM
+     `doctor` doctor INNER JOIN `hemograma` hemograma ON doctor.`dni_doctor` = hemograma.`dni_doctor`
+GROUP BY 
+      hemograma.`protocolo_lab`]]>
+	</queryString>
+	<field name="doctor_apellido" class="java.lang.String"/>
+	<field name="doctor_nombre" class="java.lang.String"/>
+	<field name="doctor_dni_doctor" class="java.lang.Integer"/>
+	<field name="hemograma_protocolo_lab" class="java.lang.String"/>
+	<field name="hemograma_fecha" class="java.lang.String"/>
+	<group name="nom">
+		<groupExpression><![CDATA[$F{doctor_nombre}]]></groupExpression>
+		<groupHeader>
+			<band height="31"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="19"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="849e30e8-4a97-4474-8459-579916986dd1"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="85267c26-ee06-46ea-b796-770562b17f8b"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="fb2984ec-edf6-4b0e-96cc-4153e175261e"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="275" y="23" width="100" height="20" uuid="290eb0cd-0777-428b-a278-59d965c2a696"/>
+					<textFieldExpression><![CDATA[$F{doctor_nombre}$F{doctor_dni_doctor}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="85c29591-dd5d-49ac-a355-592108d360ec"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0eb009d5-17c3-44f2-9f40-f29ef1181702"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="6a79dc68-3169-4487-937e-26c86dc90213"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="ec180f39-b53a-4e69-bc7d-3af4d472bb92"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="fc3fe91e-593f-4dde-8d37-b4eb370a749c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Protocolo Lab.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c05199c9-56c4-4a8c-9acc-8c94158fcb86"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="e87e2421-b444-442e-9193-b33fbebf972f"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="cda8e47c-8068-451e-97ee-0a4758976991"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{doctor_apellido}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" uuid="de765829-5876-4bc9-8a59-e2c76c54c704"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{doctor_nombre}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="0" width="111" height="20" uuid="405194f2-4bb3-4229-b4ff-ca51d4cdade8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{doctor_dni_doctor}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" uuid="b2634fa5-81a6-4879-9c91-186438d18d19"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hemograma_protocolo_lab}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" uuid="2aac3626-cc8e-4827-8ba7-e4599477fa18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hemograma_fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="179">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="166" width="515" height="13" backcolor="#E6E6E6" uuid="f3f7c217-1611-4403-9fb8-11b96e72a88b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="166" width="40" height="13" backcolor="#E6E6E6" uuid="a82ae8ff-e0ee-4a13-b012-a28524db207b"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="166" width="100" height="13" uuid="e5459bf4-5500-4c25-98c6-9737e5bc2ab0"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<barChart>
+				<chart>
+					<reportElement x="244" y="12" width="200" height="140" uuid="67e978ed-fb6d-40a7-937a-8421fc5b678c"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{doctor_apellido}+","+$F{doctor_nombre}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{hemograma_fecha}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{nom_COUNT}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

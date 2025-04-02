@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fb137429-e674-4e73-a821-b1f0328d55a1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="123"/>
+	<parameter name="protocolo_lab" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     animal_pequenios.`cod_animal` AS animal_pequenios_cod_animal,
+     animal_pequenios.`nombre` AS animal_pequenios_nombre,
+     animal_pequenios.`cod_especie` AS animal_pequenios_cod_especie,
+     animal_pequenios.`cod_raza` AS animal_pequenios_cod_raza,
+     animal_pequenios.`peso` AS animal_pequenios_peso,
+     animal_pequenios.`nacimiento` AS animal_pequenios_nacimiento,
+     animal_pequenios.`sexo` AS animal_pequenios_sexo,
+     animal_pequenios.`color` AS animal_pequenios_color,
+     animal_pequenios.`dni_duenio` AS animal_pequenios_dni_duenio,
+     animal_pequenios.`vivo` AS animal_pequenios_vivo,
+     doctor.`dni_doctor` AS doctor_dni_doctor,
+     doctor.`nombre` AS doctor_nombre,
+     doctor.`apellido` AS doctor_apellido,
+     doctor.`email` AS doctor_email,
+     doctor.`matricula` AS doctor_matricula,
+     doctor.`domicilio` AS doctor_domicilio,
+     doctor.`ciudad` AS doctor_ciudad,
+     doctor.`telefono_fijo` AS doctor_telefono_fijo,
+     doctor.`telefono_celular` AS doctor_telefono_celular,
+     duenio.`dni_duenio` AS duenio_dni_duenio,
+     duenio.`nombre` AS duenio_nombre,
+     duenio.`apellido` AS duenio_apellido,
+     duenio.`email` AS duenio_email,
+     duenio.`facebook` AS duenio_facebook,
+     duenio.`domicilio` AS duenio_domicilio,
+     duenio.`ciudad` AS duenio_ciudad,
+     duenio.`telefono_fijo` AS duenio_telefono_fijo,
+     duenio.`telefono_celular` AS duenio_telefono_celular
+FROM
+     `animal_pequenios` animal_pequenios INNER JOIN `hemograma` hemograma ON animal_pequenios.`cod_animal` = hemograma.`cod_animal`
+     INNER JOIN `doctor` doctor ON hemograma.`dni_doctor` = doctor.`dni_doctor`
+     INNER JOIN `duenio` duenio ON animal_pequenios.`dni_duenio` = duenio.`dni_duenio`
+WHERE
+     protocolo_lab = $P{protocolo_lab}]]>
+	</queryString>
+	<field name="cod_animal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_especie" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_raza" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="peso" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nacimiento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="color" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dni_duenio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vivo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="protocolo_lab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="caso_clinico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dni_doctor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="eritrocitos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hemoglobina" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hematocrito" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vcm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hcm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="chcm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reticulocitos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ipr" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="eritr_nucleados" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="p_plasmaticas" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fibrinogeno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rel_pp_fibr" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="leucocitos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mieloblastos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="promielocitos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mielocitos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="metamielocitos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="neutrof_cay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="neutrof_seg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="eosinofilos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="basofilos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="linfocitos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monocitos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="observaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="matricula" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="domicilio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono_fijo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono_celular" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="facebook" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="animal_pequenios_cod_animal" class="java.lang.Integer"/>
+	<field name="animal_pequenios_nombre" class="java.lang.String"/>
+	<field name="animal_pequenios_cod_especie" class="java.lang.Integer"/>
+	<field name="animal_pequenios_cod_raza" class="java.lang.Integer"/>
+	<field name="animal_pequenios_peso" class="java.lang.Integer"/>
+	<field name="animal_pequenios_nacimiento" class="java.sql.Date"/>
+	<field name="animal_pequenios_sexo" class="java.lang.String"/>
+	<field name="animal_pequenios_color" class="java.lang.String"/>
+	<field name="animal_pequenios_dni_duenio" class="java.lang.Integer"/>
+	<field name="animal_pequenios_vivo" class="java.lang.String"/>
+	<field name="doctor_dni_doctor" class="java.lang.Integer"/>
+	<field name="doctor_nombre" class="java.lang.String"/>
+	<field name="doctor_apellido" class="java.lang.String"/>
+	<field name="doctor_email" class="java.lang.String"/>
+	<field name="doctor_matricula" class="java.lang.String"/>
+	<field name="doctor_domicilio" class="java.lang.String"/>
+	<field name="doctor_ciudad" class="java.lang.String"/>
+	<field name="doctor_telefono_fijo" class="java.lang.String"/>
+	<field name="doctor_telefono_celular" class="java.lang.String"/>
+	<field name="duenio_dni_duenio" class="java.lang.Integer"/>
+	<field name="duenio_nombre" class="java.lang.String"/>
+	<field name="duenio_apellido" class="java.lang.String"/>
+	<field name="duenio_email" class="java.lang.String"/>
+	<field name="duenio_facebook" class="java.lang.String"/>
+	<field name="duenio_domicilio" class="java.lang.String"/>
+	<field name="duenio_ciudad" class="java.lang.String"/>
+	<field name="duenio_telefono_fijo" class="java.lang.String"/>
+	<field name="duenio_telefono_celular" class="java.lang.String"/>
+	<title>
+		<band height="143" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="37" width="65" height="70" uuid="b4d2d6be-617d-41ed-aa10-35f398536d36"/>
+				<imageExpression><![CDATA["C:\\Users\\BayBay\\Documents\\NetBeansProjects\\Siga1\\src\\Reportes\\escudoUCHA.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="220" y="17" width="153" height="20" uuid="b4bdd6e9-aa3c-46f4-8e21-c24ac186b091"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Lab. de Análisis Clínicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="49" width="99" height="41" uuid="b5435173-d9d7-436b-8e96-6215a5a3590f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[HOSPITAL ESCUELA
+DE
+VETERINARIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="61" width="148" height="29" uuid="75967091-143c-45b9-b357-7638a42c37d5"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Universidad Nacional de La Rioja
+Sede Universitaria Chamical]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="17" width="76" height="20" uuid="40633826-c0ac-4e2d-8fb0-06c0a4f2823b"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Protocolo Lab N°:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="41" width="35" height="20" uuid="2bfe0ed6-c942-4857-aa70-fc4fff398665"/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="70" width="87" height="20" uuid="6f93e1d3-15f2-442c-947c-aab2e8b5e98e"/>
+				<text><![CDATA[Ficha Clínica N°:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="90" width="76" height="20" uuid="d24e95a6-a4b0-459e-abfd-c782d1737bc7"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID del Animal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="110" width="62" height="20" uuid="5ddc7e47-c606-4df2-a396-95172b1a3597"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Propietario:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="462" y="17" width="100" height="20" uuid="f6e9e168-1c7c-49de-8edd-bfdd6e36c3cd"/>
+				<textFieldExpression><![CDATA[$F{protocolo_lab}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="41" width="100" height="20" uuid="f94225a0-4e3b-4f3e-9b5c-53bcd6ad232f"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="70" width="89" height="20" uuid="e62d5f67-39ab-4df2-9886-47b5c7d1fdc4"/>
+				<textFieldExpression><![CDATA[$F{caso_clinico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="90" width="153" height="20" uuid="fa04ed01-18ce-421d-a1c3-364b16996b0a"/>
+				<textFieldExpression><![CDATA[$F{animal_pequenios_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="110" width="264" height="20" uuid="9dd390d0-f418-4b11-a9e4-d6303cf58bde"/>
+				<textFieldExpression><![CDATA[$F{duenio_apellido}+","+$F{duenio_nombre}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="213" height="130" uuid="64dacb62-dc6b-48f9-b1a8-124430ec0459"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="0" width="160" height="90" uuid="b3b8dceb-4d47-448f-9062-f2cb8c91d468"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="90" width="342" height="20" uuid="c247346b-676d-45eb-9fd5-83efaab5b327"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="110" width="342" height="20" uuid="54103d80-2cae-466e-969a-ab00f3a2cbd0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="373" y="0" width="182" height="90" uuid="61efcc9c-d0f6-42f7-b09f-7cf2766727c8"/>
+			</rectangle>
+			<textField>
+				<reportElement x="85" y="17" width="100" height="20" uuid="1c982c53-e1a5-4611-b8f6-72b7a3cf0124"/>
+				<textFieldExpression><![CDATA[$P{protocolo_lab}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="198" y="0" width="188" height="35" uuid="f071fff9-8639-4855-8efb-a823a4eae967"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[HEMOGRAMA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band height="624">
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="555" height="20" uuid="93213013-24eb-473f-b5be-55502b2d1465"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="27" y="0" width="100" height="20" uuid="3ecec935-4571-462a-acb6-9385bbea0c8a"/>
+				<text><![CDATA[Doctor responsable:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="127" y="0" width="403" height="20" uuid="e2fc3bbc-88ab-4bee-9574-1f07f0417af9"/>
+				<textFieldExpression><![CDATA[$F{doctor_apellido}+","+$F{doctor_nombre}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="20" width="555" height="20" uuid="5802e9dc-a46a-42be-aded-d3e3dcd0d4a5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="40" width="555" height="20" uuid="f7c6730b-30f0-4204-b703-88ef7b38a6aa"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="60" width="555" height="20" uuid="a620d052-adca-40e1-bb25-46237c15f7e8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="80" width="555" height="20" uuid="844e6cb2-c398-402b-98ec-da2cb8ba268d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="160" width="555" height="20" uuid="01c3d65e-3e1f-4b0a-a7b1-6367d662e680"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="140" width="555" height="20" uuid="fba4203f-9521-4493-8ccd-96aadfff8135"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="100" width="555" height="20" uuid="c0d1b44f-706e-4305-87c9-ac7535fdaa9f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="120" width="555" height="20" uuid="d7763358-eb19-4f98-98b1-b277d5ca959c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="240" width="555" height="20" uuid="bd2234b7-a422-404e-9b29-830fe1a96b7f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="220" width="555" height="20" uuid="5e32e751-aba3-4fc0-830d-0cc2e45684ba"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="180" width="555" height="20" uuid="81fb65f0-42d0-47c4-abac-f828cee520e4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="200" width="555" height="20" uuid="bfb0032d-70e9-401c-bf58-2df736b94f1c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="113" y="20" width="100" height="20" uuid="ef7c9732-e5ea-4978-a581-cfb4909842b0"/>
+				<textFieldExpression><![CDATA[$F{eritrocitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="40" width="100" height="20" uuid="2806846c-d5c2-4ae4-af69-0220c101ddb7"/>
+				<textFieldExpression><![CDATA[$F{hemoglobina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="60" width="100" height="20" uuid="1cc9b889-cb0f-4386-967e-ddd0e8c5ac48"/>
+				<textFieldExpression><![CDATA[$F{hematocrito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="80" width="100" height="20" uuid="af4c26d0-826f-463f-ad92-af96f6283449"/>
+				<textFieldExpression><![CDATA[$F{vcm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="100" width="100" height="20" uuid="b226882c-197c-4dfe-852a-15e7e8bbd9e8"/>
+				<textFieldExpression><![CDATA[$F{hcm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="140" width="100" height="20" uuid="dcf9da24-6ff1-489d-aec3-78b277a08ac2"/>
+				<textFieldExpression><![CDATA[$F{reticulocitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="120" width="100" height="20" uuid="51143667-a1af-4b83-85e3-6070a47c5bca"/>
+				<textFieldExpression><![CDATA[$F{chcm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="160" width="100" height="20" uuid="08810e1d-42e3-4efc-b4dd-1c560b2d42ca"/>
+				<textFieldExpression><![CDATA[$F{ipr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="180" width="100" height="20" uuid="ef845cfa-e334-45ac-b404-dadc86e00296"/>
+				<textFieldExpression><![CDATA[$F{eritr_nucleados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="200" width="100" height="20" uuid="beee0322-11b0-4889-bcfc-aa9f9211aab6"/>
+				<textFieldExpression><![CDATA[$F{p_plasmaticas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="220" width="100" height="20" uuid="c201c0a8-68b3-491c-a8d6-bdceb75654dc"/>
+				<textFieldExpression><![CDATA[$F{fibrinogeno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="240" width="100" height="20" uuid="44f00b34-b769-412b-9c76-1d42c574b17c"/>
+				<textFieldExpression><![CDATA[$F{rel_pp_fibr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="20" width="54" height="20" uuid="fa3ca9c2-524c-4582-8966-fc461dcabe43"/>
+				<text><![CDATA[Eritrocitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="40" width="74" height="20" uuid="d02dd7ea-a6f9-41b8-afbe-c11907723431"/>
+				<text><![CDATA[Hemoglobina:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="60" width="74" height="20" uuid="f2e348f9-4d17-4eba-b9fb-21fef7d43597"/>
+				<text><![CDATA[Hematocrito:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="80" width="41" height="20" uuid="31dc9f21-4b73-4084-9f79-fd177557cdff"/>
+				<text><![CDATA[V.C.M.::]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="100" width="41" height="20" uuid="5bfa2397-b814-491c-84f4-2e8f535150ba"/>
+				<text><![CDATA[H.C.M.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="120" width="54" height="20" uuid="50005df6-369f-4601-8b10-338c4c66d6bb"/>
+				<text><![CDATA[C.H.C.M.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="140" width="74" height="20" uuid="4b3e6ce1-49b3-404f-9483-6f0e4015f3e6"/>
+				<text><![CDATA[Reticulocitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="160" width="31" height="20" uuid="4ae326f4-5a8d-4684-922a-9e979a63c540"/>
+				<text><![CDATA[I.P.R.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="180" width="86" height="20" uuid="12d4f5ef-796f-4ca6-9351-017dc2eb2a88"/>
+				<text><![CDATA[Eritr. Nculeados:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="200" width="74" height="20" uuid="0124a504-e57b-400f-8b7e-f16e2c137621"/>
+				<text><![CDATA[P. plasmaticas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="220" width="74" height="20" uuid="117b76db-e010-4641-9047-3bba3ace9403"/>
+				<text><![CDATA[Fibrinogeno:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="240" width="74" height="20" uuid="50a0acb6-5f20-4690-bac4-0810c8a5984d"/>
+				<text><![CDATA[Rel. Pp/ Fibr.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="20" width="54" height="20" uuid="66583b4f-fb1a-4900-b8b8-10466c407763"/>
+				<text><![CDATA[Leucocitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="60" width="74" height="20" uuid="f14cd647-5f2f-4e5a-8cb7-aeed98155578"/>
+				<text><![CDATA[Promielocitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="180" width="54" height="20" uuid="76dfc906-a96e-4183-862c-223c642d80cb"/>
+				<text><![CDATA[Basófilos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="80" width="60" height="20" uuid="49855fd6-97b3-4488-93b1-668814971545"/>
+				<text><![CDATA[Mielocitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="40" width="74" height="20" uuid="e6e0bbfb-e331-4c7b-8a44-4f0db6cafb8b"/>
+				<text><![CDATA[Mieloblastos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="160" width="60" height="20" uuid="cd7a9ec5-f4a2-4e95-853f-20807a2ea65a"/>
+				<text><![CDATA[Eosinófilos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="120" width="74" height="20" uuid="9872e617-394a-48d1-9121-810399df3961"/>
+				<text><![CDATA[Neutróf. Cay.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="200" width="54" height="20" uuid="3efee2ca-7782-4926-bb4a-d1b6e2c39211"/>
+				<text><![CDATA[Linfocitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="220" width="60" height="20" uuid="f9b6ba6e-c31d-42ef-9ab5-7a210648f325"/>
+				<text><![CDATA[Monocitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="100" width="86" height="20" uuid="6463ea4e-11a3-4597-a5ee-cdb1a3706160"/>
+				<text><![CDATA[Metamielocitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="140" width="74" height="20" uuid="d61b7d03-4d3f-43da-aef8-f454dc0e8c3d"/>
+				<text><![CDATA[Neutróf. Seg.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="260" width="102" height="20" uuid="a2507a2a-7656-4cd2-bd2d-8166daf0a435"/>
+				<text><![CDATA[OBSERVACIONES:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="260" width="555" height="110" uuid="1b34a76c-c44d-4a98-97f9-21ee2d936d23"/>
+			</rectangle>
+			<textField>
+				<reportElement x="52" y="280" width="478" height="72" uuid="6abb04a6-29c3-417a-8f19-859200a9349c"/>
+				<textFieldExpression><![CDATA[$F{observaciones}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="220" width="100" height="20" uuid="aa091b23-4a3a-4c5e-8ece-701a33e2fdd2"/>
+				<textFieldExpression><![CDATA[$F{monocitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="20" width="100" height="20" uuid="1b4f8d76-4a8d-45cb-a3b9-47680cf981c7"/>
+				<textFieldExpression><![CDATA[$F{leucocitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="40" width="100" height="20" uuid="05a4246f-c74d-454c-98ba-fa81302967b5"/>
+				<textFieldExpression><![CDATA[$F{mieloblastos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="60" width="100" height="20" uuid="6e787567-d0de-4afc-ab0f-4cc0e6e8d545"/>
+				<textFieldExpression><![CDATA[$F{promielocitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="80" width="100" height="20" uuid="f7d4f40b-0e3c-4b79-8a00-f66c263b46d4"/>
+				<textFieldExpression><![CDATA[$F{mielocitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="100" width="100" height="20" uuid="00147af4-50ce-4e89-a705-f6b076cfde66"/>
+				<textFieldExpression><![CDATA[$F{metamielocitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="120" width="100" height="20" uuid="2b8b2c5f-6d3d-4cf0-b08b-1fb1cd8e041a"/>
+				<textFieldExpression><![CDATA[$F{neutrof_cay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="139" width="100" height="20" uuid="604ff499-c509-4699-b7ae-5c6b9132ff38"/>
+				<textFieldExpression><![CDATA[$F{neutrof_seg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="159" width="100" height="20" uuid="1d4385e1-6a35-4b4f-ad56-df1ff3f60651"/>
+				<textFieldExpression><![CDATA[$F{eosinofilos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="180" width="100" height="20" uuid="e160e8d1-2a89-4594-b0e6-d8442ea7388f"/>
+				<textFieldExpression><![CDATA[$F{basofilos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="200" width="100" height="20" uuid="6af68d89-dace-44ee-baf2-4d3193cac5e9"/>
+				<textFieldExpression><![CDATA[$F{linfocitos}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="373" y="20" width="1" height="240" uuid="8d59aeb0-5e8e-4abc-9d54-2167e14eafbf"/>
+			</line>
+			<line>
+				<reportElement x="269" y="20" width="1" height="240" uuid="f09edfa8-5186-4f04-9a91-a32cd6e50e1d"/>
+			</line>
+			<line>
+				<reportElement x="97" y="20" width="1" height="240" uuid="bf95f461-1933-434e-bf59-964bc39de2cc"/>
+			</line>
+		</band>
+	</columnFooter>
+</jasperReport>

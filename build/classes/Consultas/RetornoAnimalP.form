@@ -1,0 +1,1938 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <Properties>
+    <Property name="closable" type="boolean" value="true"/>
+    <Property name="resizable" type="boolean" value="true"/>
+    <Property name="title" type="java.lang.String" value="CREAR RETORNO ANIMALES PEQUE&#xd1;OS"/>
+    <Property name="autoscrolls" type="boolean" value="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="1"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jScrollPane37" alignment="0" pref="848" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jScrollPane37" min="-2" pref="846" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane37">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+          <Properties>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[500, 958]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jpGeneral">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="RETORNO">
+                      <Font PropertyName="font" name="Tahoma" size="11" style="1"/>
+                    </TitledBorder>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[813, 259]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="General">
+                    <Property name="tabTitle" type="java.lang.String" value="General"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                                          <Component id="jlFecha" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
+                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                          <Component id="jlHora" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jlCasoClinico" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="571" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jlApellido" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jlTelefono" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel123" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel143" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jlDni" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="jBuscarPropietario" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jlDomicilio" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jcbDatosDueño" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jlDato" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel124" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
+                                                  <Component id="jlDocente1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jlAlumno2" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jlDocente2" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                                                  <Component id="jLabel125" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="jBuscarDocente" min="-2" pref="120" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Group type="102" attributes="0">
+                                                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                                  <Component id="jlNombre" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <Group type="102" attributes="0">
+                                                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                                                  <EmptySpace max="-2" attributes="0"/>
+                                                                  <Component id="jlEspecie" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                                              <Group type="102" attributes="0">
+                                                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                                  <Component id="jlPeso" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <Group type="102" alignment="0" attributes="0">
+                                                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                                                  <EmptySpace max="-2" attributes="0"/>
+                                                                  <Component id="jlRaza" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <Group type="102" attributes="0">
+                                                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                                  <Component id="jlSexo" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <Group type="102" alignment="0" attributes="0">
+                                                                  <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                                  <Component id="jlColor" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
+                                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jlFechaNacimiento" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="jBuscarAnimal" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jlDocente" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jlAlumno" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                                          <Component id="jlAlumno1" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                          <Component id="jBuscarAlumno" min="-2" pref="120" max="-2" attributes="0"/>
+                                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jbGuardar" min="-2" pref="144" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
+                          <Component id="jbSalir" min="-2" pref="142" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlCasoClinico" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jLabel123" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel124" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel125" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel7" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel143" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlDni" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlEspecie" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlDocente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlDocente1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlDocente2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlDomicilio" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlRaza" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jBuscarDocente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jcbDatosDueño" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlDato" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlFechaNacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="jlAlumno1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jBuscarPropietario" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jBuscarAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="jlAlumno2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlSexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlColor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jBuscarAnimal" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jbGuardar" pref="58" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jbSalir" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="506" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Fecha:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel2">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hora:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel3">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="CASO CLINICO N&#xba;:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel4">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Propietario:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel5">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Domicilio:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel6">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Telefono:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jcbDatosDue&#xf1;o">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="e-mail"/>
+                        <StringItem index="1" value="facebook"/>
+                        <StringItem index="2" value="celular"/>
+                        <StringItem index="3" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbDatosDue&#xf1;oActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel7">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Docente Responsable del caso:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel8">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Alumno Responsable del caso:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel10">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel11">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Fecha nacimiento:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel12">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Especie:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel13">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Raza:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel14">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Peso:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel15">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Sexo:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel16">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Color:"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlFecha">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="fecha"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlHora">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="hora"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlCasoClinico">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="caso clinico"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlApellido">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="apellido"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlDomicilio">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="domicilio"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlTelefono">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="telefono"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlDocente">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="docente"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlAlumno">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="alumno"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlNombre">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="nombre"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlFechaNacimiento">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="fecha"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlSexo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="sexo"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlEspecie">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="especie"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlRaza">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="raza"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlPeso">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="peso"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlDato">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="dato"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jBuscarPropietario">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Buscar Propietario"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBuscarPropietarioActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel143">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="DNI:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlDni">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="dni"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlColor">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="color"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlDocente1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="docente"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlDocente2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="docente"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JButton" name="jBuscarDocente">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Buscar Docente"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBuscarDocenteActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlAlumno2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="alumno"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlAlumno1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="alumno"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JButton" name="jBuscarAlumno">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Buscar Alumno"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBuscarAlumnoActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jBuscarAnimal">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Buscar Animal"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBuscarAnimalActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel9">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Contacto"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel123">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="DATOS DEL PROPIETARIO"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel124">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="DATOS DEL ANIMAL"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel125">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="DATOS DE RESPONSABLES DE LA CONSULTA"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jbGuardar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Guardar Consulta"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbGuardarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jbSalir">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salir"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JTabbedPane" name="jtpPesta&#xf1;as">
+              <Properties>
+                <Property name="autoscrolls" type="boolean" value="true"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Detalles">
+                    <Property name="tabTitle" type="java.lang.String" value="Detalles"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="jpRetorno1">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Retorno 1/5">
+                          <Font PropertyName="font" name="Tahoma" size="11" style="1"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[728, 630]"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="PARTE 1">
+                        <Property name="tabTitle" type="java.lang.String" value="PARTE 1"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jScrollPane2" min="-2" pref="645" max="-2" attributes="0"/>
+                                  <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="162" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane2" min="-2" pref="154" max="-2" attributes="0"/>
+                              <EmptySpace pref="705" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel18">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Anamnesis:"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="jtaAnamnesis">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="rows" type="int" value="5"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jpRetorno2">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Retorno 2/5">
+                          <Font PropertyName="font" name="Tahoma" size="11" style="1"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[728, 630]"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="PARTE 2">
+                        <Property name="tabTitle" type="java.lang.String" value="PARTE 2"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                      <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                                      <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jcbMaNasal" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jcbMaGenital" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jcbMaBucal" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jcbMaOcular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jcbHidratacion" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jtfDeshidratado" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jcbSubmandibular1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jcbAxilar1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jcbSubmandibular2" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jcbSubmandibular3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jcbAxilar2" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jcbAxilar3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel42" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel45" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jcbInguinales1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jcbInguinales2" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jcbInguinales3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jcbPopliteos1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jcbPopliteos2" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jcbPopliteos3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jpDeshidratado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jcbSubmandibular4" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbAxilar4" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbInguinales4" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbPopliteos4" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                                      <Component id="jpPopliteos" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jpAxilar" max="32767" attributes="0"/>
+                                                      <Component id="jpSubmandibular" max="32767" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                                          <Component id="jpInguinales" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jtftemperatura" min="-2" pref="64" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jcbCC" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jcbPulsoRitmo" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jcbPulsoIntensidad" min="-2" pref="67" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jtfFC" min="-2" pref="44" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jcbLLCap" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                              <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="jtfFR" min="-2" pref="39" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtftemperatura" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtfFC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtfFR" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jcbCC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jcbLLCap" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jcbPulsoIntensidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jcbPulsoRitmo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jcbHidratacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jtfDeshidratado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbMaOcular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbSubmandibular1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbSubmandibular2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbSubmandibular3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbSubmandibular4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbMaBucal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbAxilar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbAxilar2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbAxilar3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbAxilar4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbMaNasal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbInguinales1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbInguinales2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbInguinales3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jcbInguinales4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jcbMaGenital" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                              <Component id="jLabel45" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jcbPopliteos1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jcbPopliteos2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jcbPopliteos3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jcbPopliteos4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jpDeshidratado" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jpAxilar" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jpSubmandibular" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="jpPopliteos" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jpInguinales" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel19">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Constantes Fisiol&#xf3;gicas:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel20">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Temperatura:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jtftemperatura">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel21">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Frecuencia Cardiaca:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jtfFC">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel22">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Frecuencia Respiratoria:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jtfFR">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfFRActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel23">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="CC:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbCC">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="5">
+                            <StringItem index="0" value="1"/>
+                            <StringItem index="1" value="2"/>
+                            <StringItem index="2" value="3"/>
+                            <StringItem index="3" value="4"/>
+                            <StringItem index="4" value="5"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel24">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="LL. Cap.:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbLLCap">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="Rapido"/>
+                            <StringItem index="1" value="Normal"/>
+                            <StringItem index="2" value="Lento"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel25">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Pulso"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbPulsoRitmo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Regular"/>
+                            <StringItem index="1" value="Irregular"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbPulsoRitmoActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel26">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ritmo:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel27">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Intensidad:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbPulsoIntensidad">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="Fuerte"/>
+                            <StringItem index="1" value="Normal"/>
+                            <StringItem index="2" value="Debil"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel28">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Hidratacion:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbHidratacion">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Normal"/>
+                            <StringItem index="1" value="Deshidratado"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbHidratacionActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel30">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Mucosas Aparentes:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel31">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ocular:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel32">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Bucal:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel33">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nasal:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel34">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Genital:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbMaOcular">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="5">
+                            <StringItem index="0" value="Rosa normal"/>
+                            <StringItem index="1" value="Palida"/>
+                            <StringItem index="2" value="Icterica"/>
+                            <StringItem index="3" value="Cianotica"/>
+                            <StringItem index="4" value="Hiperemica"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbMaBucal">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="5">
+                            <StringItem index="0" value="Rosa normal"/>
+                            <StringItem index="1" value="Palida"/>
+                            <StringItem index="2" value="Icterica"/>
+                            <StringItem index="3" value="Cianotica"/>
+                            <StringItem index="4" value="Hiperemica"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbMaNasal">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="5">
+                            <StringItem index="0" value="Rosa normal"/>
+                            <StringItem index="1" value="Palida"/>
+                            <StringItem index="2" value="Icterica"/>
+                            <StringItem index="3" value="Cianotica"/>
+                            <StringItem index="4" value="Hiperemica"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbMaGenital">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="5">
+                            <StringItem index="0" value="Rosa normal"/>
+                            <StringItem index="1" value="Palida"/>
+                            <StringItem index="2" value="Icterica"/>
+                            <StringItem index="3" value="Cianotica"/>
+                            <StringItem index="4" value="Hiperemica"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel35">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Ganglios Linfaticos:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel36">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Submandibular:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbSubmandibular1">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Si"/>
+                            <StringItem index="1" value="No"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbSubmandibular1ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel37">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Normal"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel39">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Axilar:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel40">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Normal"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbAxilar1">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Si"/>
+                            <StringItem index="1" value="No"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbAxilar1ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel42">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Inguinales:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel43">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Normal"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbInguinales1">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Si"/>
+                            <StringItem index="1" value="No"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbInguinales1ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel45">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popliteos:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel46">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Normal"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbPopliteos1">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Si"/>
+                            <StringItem index="1" value="No"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbPopliteos1ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="jpDeshidratado">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="178" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jpSubmandibular">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="33" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jpAxilar">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jpInguinales">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="408" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="31" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jpPopliteos">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="408" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="33" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="jLabel29">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="si esta deshidratado %"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jtfDeshidratado">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel38">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="si es no:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbSubmandibular2">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Duros"/>
+                            <StringItem index="1" value="Blandos"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbSubmandibular3">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Regulares"/>
+                            <StringItem index="1" value="Irregulares"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbSubmandibular4">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Grandes"/>
+                            <StringItem index="1" value="Chicos"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel41">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="si es no:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbAxilar2">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Duros"/>
+                            <StringItem index="1" value="Blandos"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbAxilar3">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Regulares"/>
+                            <StringItem index="1" value="Irregulares"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbAxilar4">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Grandes"/>
+                            <StringItem index="1" value="Chicos"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel44">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="si es no:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbInguinales2">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Duros"/>
+                            <StringItem index="1" value="Blandos"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbInguinales3">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Regulares"/>
+                            <StringItem index="1" value="Irregulares"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbInguinales4">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Grandes"/>
+                            <StringItem index="1" value="Chicos"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel47">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="si es no:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbPopliteos2">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Duros"/>
+                            <StringItem index="1" value="Blandos"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbPopliteos3">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Regulares"/>
+                            <StringItem index="1" value="Irregulares"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jcbPopliteos4">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Grandes"/>
+                            <StringItem index="1" value="Chicos"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jpRetorno3">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Retorno 3/5">
+                          <Font PropertyName="font" name="Tahoma" size="11" style="1"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[728, 630]"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="PARTE 9">
+                        <Property name="tabTitle" type="java.lang.String" value="PARTE 9"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="730" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jpConvulsion" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jpParalisis" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jpParesia" alignment="1" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                                      <Component id="jLabel126" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel126" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="jpParalisis" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jpParesia" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jpConvulsion" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="206" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="645" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="jpParalisis">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jpConvulsion">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="278" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jpParesia">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="jLabel126">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="SISTEMA EVALUADO Y DATOS ENCONTRADOS"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="jtaSistema">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="rows" type="int" value="5"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jpConsulta10">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Consulta 10/10">
+                          <Font PropertyName="font" name="Tahoma" size="11" style="1"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[728, 630]"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="PARTE 10">
+                        <Property name="tabTitle" type="java.lang.String" value="PARTE 10"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+                                      <Component id="jLabel116" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane35" min="-2" pref="600" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="151" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel116" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jScrollPane35" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="743" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel116">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="INDICACIONES AL PROPIETARIO/RESPONSABLE"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane35">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="jtaIndicaciones">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="rows" type="int" value="5"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
